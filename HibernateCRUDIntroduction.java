@@ -14,7 +14,9 @@ import org.junit.Test;
 
 import com.itheima.domain.User;
 import com.itheima.utlils.HibernateUtil;
-
+/**
+	此處代碼有用到HibernateUtil工具類，詳見上級目錄中的HibernateUtil類
+*/
 public class Test1 {
 	@Test
 	public void testAdd1() {
