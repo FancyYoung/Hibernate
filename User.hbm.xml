@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 下列约束文件的路径在 hibernate-core-5.0.7.Final.jar/hibernate-mapping-3.0.dtd中复制-->
+<!-- 注意！此文件为实体类的映射文件。请将此xml文件放在domain包下，与实体类同一路径 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.itheima.domain.User" table="user"><!--name的值是实体类的路径   table 表示对应的表的名称 -->
+		<id name="id" column="id">		<!--name的值是实体类的中主键的变量名   column 表示对应表中的主键名称名称 -->
+			<generator class="native"></generator>	
+		</id>
+		<property name="name" length="20"></property>
+		<property name="address" length="30"></property>
+	</class>
+</hibernate-mapping>
