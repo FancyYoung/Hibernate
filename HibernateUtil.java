@@ -16,5 +16,4 @@ public class HibernateUtil {
 		// 返回Session对象。相当于Connection连接对象
 		return sessionFactory.openSession();
 	}
-        
 }
