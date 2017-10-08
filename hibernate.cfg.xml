@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- 设置c3p0连接池节约数据库性能 -->
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">20</property>	<!-- 最大连接数 -->
+		<property name="hibernate.c3p0.min_size">5</property> 	<!-- 最小连接数 -->
+		<property name="hibernate.c3p0.timeout">120</property>	<!-- 超时时间 -->
+		<property name="hibernate.c3p0.idle_test_period">3000</property>	<!-- 空闲时间 -->
+		
+		<!-- 配置关于数据库链接的4个项 driver_class url username password -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql:///hibernate</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		
+		<!-- 显示sql语句 -->
+		<property name="hibernate.show_sql">true</property>
+		
+		<!-- 格式化sql语句 -->
+		<property name="hibernate.format_sql">true</property>
+		
+		<!-- hibernate的方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- 配置hibernate的映射文件所在位置 -->
+		<mapping resource="com/itheima/domain/User.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
